@@ -7,6 +7,10 @@ The algorithm is implemented with circular arrays.
 - Data is persistent. When the application is terminated, the data is saved to a cache file and loaded on restart.
 - Only uses standard go packages.
 
+# Usage
+- Run main.go
+- curl localhost:8080
+
 # Future Improvements
-- Add versatility (choose the cache file name, time domain(minute, hour, day))
+- Add versatility (choose the cache file name, port number, time domain(minute, hour, day))
 - Add unit tests
