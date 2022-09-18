@@ -25,14 +25,16 @@ type Server struct {
 func NewServer(filePath string, port string) *Server {
 
 	server := Server{data: &persistent.RequestData{Timestamp: time.Now()}}
-	_, err := os.Open(filePath)
+	_, err := os.Stat(filePath)
 	if err == nil {
 		err = server.GetData().ReadFromFile(filePath)
 		if err == nil {
 			err = os.Remove(filePath)
 			if err != nil {
-				log.Println("Failed to removed cache file", err)
+				log.Println(err)
 			}
+		} else {
+			log.Println(err)
 		}
 	}
 
