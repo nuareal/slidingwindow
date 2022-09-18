@@ -9,7 +9,7 @@ The algorithm is implemented with circular arrays.
 
 # Usage
 - Run main.go
-- curl localhost:8080
+- Curl localhost:8080
 
 # Future Improvements
 - Add versatility (choose the cache file name, port number, time domain(minute, hour, day))
